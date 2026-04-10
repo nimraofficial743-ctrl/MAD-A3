@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ticket Booking App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="logo">🎟️ CinemaSpot</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#tickets-section">My Tickets</a>
+      <a href="#">Book Now</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="title-section">
+      <h1>Your Ticket Listings</h1>
+      <p>Browse your booked events and seat information.</p>
+      <input id="filterInput" type="text" placeholder="Search by event name..." />
+    </section>
+
+    <section id="tickets-section" class="tickets-grid"></section>
+
+    <p id="empty-state" class="empty-state">Loading tickets...</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

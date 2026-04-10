@@ -1,0 +1,70 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f2f2f2;
+  background: radial-gradient(circle at top, #1b1b1b 0%, #0f0f0f 60%);
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 30px;
+  background: linear-gradient(90deg, #240000 0%, #0d0d0d 100%);
+  border-bottom: 1px solid #650000;
+}
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+nav a {
+  margin-left: 18px;
+  color: #ff6961;
+  text-decoration: none;
+  font-weight: 600;
+}
+nav a:hover {color: #fff;}
+.container {max-width: 1200px; margin: 28px auto; padding: 0 16px;}
+.title-section {margin-bottom: 16px;}
+.title-section h1 {margin: 0; font-size: 2rem; color: #ffa8a8;}
+.title-section p {color: #cab0b0;}
+#filterInput {
+  width: 100%; max-width: 420px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: 1px solid #4f1b1b;
+  background: #100707;
+  color: #f4f4f4;
+  border-radius: 8px;
+}
+.tickets-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+.ticket-card {
+  background: linear-gradient(145deg, rgba(20,7,7,0.92), rgba(40,5,5,0.92));
+  border: 1px solid #550000;
+  border-radius: 14px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+.ticket-card::before {
+  content: "\1F3AB";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 3rem;
+  color: rgba(255, 81, 81, 0.25);
+}
+.ticket-card h3 {margin: 0; color: #ffe5e5; font-size: 1.2rem;}
+.ticket-card span {display: block; color: #d0afaf; margin-top: 8px;}
+.ticket-card .seat {margin-top: 10px; color: #ff9f9f; font-weight: 700;}
+.empty-state {color: #9f9f9f; text-align: center; margin-top: 18px;}
+@media (max-width: 600px) {
+  .app-header {flex-direction: column; align-items: flex-start;}
+  nav {margin-top: 10px;}
+  .tickets-grid {grid-template-columns: 1fr;}
+}
